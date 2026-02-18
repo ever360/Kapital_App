@@ -1,0 +1,1 @@
+ C:\\kapital_app\\.dart_tool\\flutter_build\\8d5c1e24b84bf9a50191a82571aecf69\\dart_build_result.json: 
