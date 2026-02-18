@@ -1,0 +1,1 @@
+ C:\\kapital_app\\.dart_tool\\flutter_build\\43187091f93924da167b359d2a8c7a98\\dart_build_result.json:  C:\\ProyectosFlutter\\flutter\\bin\\cache\\dart-sdk\\version C:\\kapital_app\\.dart_tool\\package_config.json C:\\kapital_app\\pubspec.yaml c:\\kapital_app\\.dart_tool\\package_config.json
