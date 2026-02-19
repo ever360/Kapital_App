@@ -11,28 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Kapital App',
+      title: 'Kapital App v1.1',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
         colorScheme: .fromSeed(
-          seedColor: const Color.fromARGB(255, 53, 74, 233),
+          seedColor: const Color.fromARGB(255, 13, 247, 181),
         ),
       ),
-      home: const MyHomePage(title: 'Kapital App v1.0'),
+      home: const MyHomePage(title: 'Kapital App v1.1'),
     );
   }
 }
@@ -106,7 +91,9 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: .center,
           children: [
-            const Text('te cuenta cuantas veces has precionado el botón: '),
+            const Text(
+              'te cuenta cuantas veces has precionado el botón: prueba 1 ',
+            ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
