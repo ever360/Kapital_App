@@ -1,0 +1,34 @@
+# === Deploy Kapital PWA ===
+
+# 1. Guardar cambios en main
+git checkout main
+git add .
+$msg = Read-Host "Escribe el mensaje del commit en main"
+git commit -m "$msg"
+git push origin main
+
+# 2. Compilar Flutter Web
+flutter build web --no-tree-shake-icons
+
+# 3. Corregir index.html (base href)
+(Get-Content build\web\index.html) -replace '<base href="/">', '<base href="/Kapital_App/">' | Set-Content build\web\index.html
+
+# 4. Copiar compilados a carpeta temporal
+Copy-Item build\web\* C:\deploy_temp -Recurse -Force
+
+# 5. Cambiar a gh-pages y limpiar
+git checkout gh-pages
+git rm -rf .
+
+# 6. Pegar compilados y publicar
+Copy-Item C:\deploy_temp\* . -Recurse -Force
+git add .
+git commit -m "Deploy Kapital PWA"
+git push origin gh-pages --force
+
+# 7. Volver a main
+git checkout main
+
+Write-Host "==============================="
+Write-Host "Deploy Kapital PWA completado 🚀"
+Write-Host "==============================="
