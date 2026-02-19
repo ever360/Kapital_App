@@ -1,0 +1,1 @@
+ C:\\Users\\everh\\kapital_app\\build\\4fcd5c4f6d27d4abc87dc22986e2c850\\dart_build_result.json: 
