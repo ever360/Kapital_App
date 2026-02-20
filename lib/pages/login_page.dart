@@ -8,110 +8,126 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  bool _obscurePassword = true; // controla visibilidad de la contraseña
+  bool _obscurePassword = true;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: Center(
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 60),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              // Logo / título
-              const Text(
-                "Kapital",
-                style: TextStyle(
-                  fontSize: 42,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.blueAccent,
-                  letterSpacing: 2,
-                ),
-              ),
-              const SizedBox(height: 50),
-
-              // Campo de email
-              TextField(
-                decoration: InputDecoration(
-                  hintText: "Correo electrónico",
-                  prefixIcon: const Icon(Icons.email_outlined),
-                  filled: true,
-                  fillColor: Colors.grey[100],
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(16),
-                    borderSide: BorderSide.none,
+      backgroundColor: Colors.blueAccent, // fondo azul
+      body: SizedBox.expand(
+        child: Center(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 60),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                // Logo / título
+                const Text(
+                  "Kapital",
+                  style: TextStyle(
+                    fontSize: 42,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white, // texto blanco sobre azul
+                    letterSpacing: 2,
                   ),
                 ),
-              ),
-              const SizedBox(height: 20),
+                const SizedBox(height: 50),
 
-              // Campo de contraseña con toggle
-              TextField(
-                obscureText: _obscurePassword,
-                decoration: InputDecoration(
-                  hintText: "Contraseña",
-                  prefixIcon: const Icon(Icons.lock_outline),
-                  suffixIcon: IconButton(
-                    icon: Icon(
-                      _obscurePassword
-                          ? Icons.visibility_off
-                          : Icons.visibility,
-                      color: Colors.grey,
+                // Campo de email
+                TextField(
+                  style: const TextStyle(color: Colors.black),
+                  decoration: InputDecoration(
+                    hintText: "Correo electrónico",
+                    hintStyle: const TextStyle(color: Colors.black54),
+                    prefixIcon: const Icon(
+                      Icons.email_outlined,
+                      color: Colors.black54,
+                    ),
+                    filled: true,
+                    fillColor: Colors.white, // campo blanco
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(16),
+                      borderSide: BorderSide.none,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20),
+
+                // Campo de contraseña con toggle
+                TextField(
+                  obscureText: _obscurePassword,
+                  style: const TextStyle(color: Colors.black),
+                  decoration: InputDecoration(
+                    hintText: "Contraseña",
+                    hintStyle: const TextStyle(color: Colors.black54),
+                    prefixIcon: const Icon(
+                      Icons.lock_outline,
+                      color: Colors.black54,
+                    ),
+                    suffixIcon: IconButton(
+                      icon: Icon(
+                        _obscurePassword
+                            ? Icons.visibility_off
+                            : Icons.visibility,
+                        color: Colors.black54,
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          _obscurePassword = !_obscurePassword;
+                        });
+                      },
+                    ),
+                    filled: true,
+                    fillColor: Colors.white, // campo blanco
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(16),
+                      borderSide: BorderSide.none,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 30),
+
+                // Botón de login
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white, // botón blanco
+                      padding: const EdgeInsets.symmetric(vertical: 18),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
                     ),
                     onPressed: () {
-                      setState(() {
-                        _obscurePassword = !_obscurePassword;
-                      });
+                      Navigator.pushReplacementNamed(context, '/home');
                     },
-                  ),
-                  filled: true,
-                  fillColor: Colors.grey[100],
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(16),
-                    borderSide: BorderSide.none,
-                  ),
-                ),
-              ),
-              const SizedBox(height: 30),
-
-              // Botón de login
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blueAccent,
-                    padding: const EdgeInsets.symmetric(vertical: 18),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
+                    child: const Text(
+                      "Ingresar",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.blueAccent, // texto azul
+                      ),
                     ),
                   ),
+                ),
+                const SizedBox(height: 20),
+
+                // Link de registro
+                TextButton(
                   onPressed: () {
-                    Navigator.pushReplacementNamed(context, '/home');
+                    Navigator.pushReplacementNamed(context, '/register');
                   },
                   child: const Text(
-                    "Ingresar",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                    "¿No tienes cuenta? Regístrate",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                 ),
-              ),
-              const SizedBox(height: 20),
-
-              // Link de registro
-              TextButton(
-                onPressed: () {
-                  Navigator.pushReplacementNamed(context, '/register');
-                },
-                child: const Text(
-                  "¿No tienes cuenta? Regístrate",
-                  style: TextStyle(
-                    color: Colors.blueAccent,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
