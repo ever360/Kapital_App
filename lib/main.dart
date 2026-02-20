@@ -68,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.green,
         onPressed: _incrementCounter,
         tooltip: 'Incrementar',
-        child: const Icon(Icons.add, color: Colors.black),
+        child: const Icon(Icons.add, color: Color.fromARGB(255, 27, 2, 250)),
       ),
     );
   }
