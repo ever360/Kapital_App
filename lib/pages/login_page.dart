@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -12,8 +13,19 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+    // Aquí defines el color de fondo que quieras
+    const Color fondo = Colors.orange; // cambia a azul, verde, etc.
+
+    // Barra de estado dinámica: toma el mismo color que el fondo
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(
+        statusBarColor: fondo,
+        statusBarIconBrightness: Brightness.light,
+      ),
+    );
+
     return Scaffold(
-      backgroundColor: Colors.blueAccent, // fondo azul
+      backgroundColor: fondo,
       body: SizedBox.expand(
         child: Center(
           child: SingleChildScrollView(
@@ -21,30 +33,26 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Logo / título
                 const Text(
                   "Kapital",
                   style: TextStyle(
                     fontSize: 42,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white, // texto blanco sobre azul
+                    color: Colors.white,
                     letterSpacing: 2,
                   ),
                 ),
                 const SizedBox(height: 50),
 
-                // Campo de email
                 TextField(
-                  style: const TextStyle(color: Colors.black),
                   decoration: InputDecoration(
                     hintText: "Correo electrónico",
-                    hintStyle: const TextStyle(color: Colors.black54),
                     prefixIcon: const Icon(
                       Icons.email_outlined,
                       color: Colors.black54,
                     ),
                     filled: true,
-                    fillColor: Colors.white, // campo blanco
+                    fillColor: Colors.white,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(16),
                       borderSide: BorderSide.none,
@@ -53,13 +61,10 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 const SizedBox(height: 20),
 
-                // Campo de contraseña con toggle
                 TextField(
                   obscureText: _obscurePassword,
-                  style: const TextStyle(color: Colors.black),
                   decoration: InputDecoration(
                     hintText: "Contraseña",
-                    hintStyle: const TextStyle(color: Colors.black54),
                     prefixIcon: const Icon(
                       Icons.lock_outline,
                       color: Colors.black54,
@@ -78,7 +83,7 @@ class _LoginPageState extends State<LoginPage> {
                       },
                     ),
                     filled: true,
-                    fillColor: Colors.white, // campo blanco
+                    fillColor: Colors.white,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(16),
                       borderSide: BorderSide.none,
@@ -87,12 +92,11 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 const SizedBox(height: 30),
 
-                // Botón de login
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white, // botón blanco
+                      backgroundColor: Colors.white,
                       padding: const EdgeInsets.symmetric(vertical: 18),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16),
@@ -101,19 +105,18 @@ class _LoginPageState extends State<LoginPage> {
                     onPressed: () {
                       Navigator.pushReplacementNamed(context, '/home');
                     },
-                    child: const Text(
+                    child: Text(
                       "Ingresar",
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w600,
-                        color: Colors.blueAccent, // texto azul
+                        color: fondo, // texto con el mismo color que el fondo
                       ),
                     ),
                   ),
                 ),
                 const SizedBox(height: 20),
 
-                // Link de registro
                 TextButton(
                   onPressed: () {
                     Navigator.pushReplacementNamed(context, '/register');
