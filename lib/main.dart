@@ -11,6 +11,15 @@ void main() async {
   // Ocultar barra de estado (pantalla completa)
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
 
+  // Configuración de pantalla completa y barra de estado
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: Colors.blueAccent, // mismo color que el fondo
+      statusBarIconBrightness: Brightness.light, // íconos claros
+    ),
+  );
+
   await Supabase.initialize(
     url: 'TU_SUPABASE_URL', // reemplaza con tu URL de Supabase
     anonKey: 'TU_SUPABASE_ANON_KEY', // reemplaza con tu anonKey
