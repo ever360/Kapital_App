@@ -16,7 +16,10 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.black, // Fondo negro
         textTheme: const TextTheme(
           bodyMedium: TextStyle(color: Colors.green), // Texto verde
-          headlineMedium: TextStyle(color: Colors.green, fontSize: 32),
+          headlineMedium: TextStyle(
+            color: Color.fromARGB(255, 3, 15, 242),
+            fontSize: 32,
+          ),
         ),
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.green,
@@ -56,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Te cuenta cuántas veces has presionado el botón:'),
+            const Text('Te cuenta cuántas veces has presionado el botón: esta es otra prueba de ever para ve como guarda y depura'),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
@@ -64,6 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
+
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.green,
         onPressed: _incrementCounter,
