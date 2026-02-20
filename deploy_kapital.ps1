@@ -16,17 +16,23 @@ flutter build web --no-tree-shake-icons
 # 4. Copiar compilados a carpeta temporal
 Copy-Item build\web\* C:\deploy_temp -Recurse -Force
 
-# 5. Cambiar a gh-pages y limpiar
+# 5. Validar compilados antes de limpiar gh-pages
+if (!(Test-Path C:\deploy_temp\index.html)) {
+    Write-Host "❌ Error: No se encontraron compilados en C:\deploy_temp"
+    exit
+}
+
+# 6. Cambiar a gh-pages y limpiar
 git checkout gh-pages
 git rm -rf .
 
-# 6. Pegar compilados y publicar
+# 7. Pegar compilados y publicar
 Copy-Item C:\deploy_temp\* . -Recurse -Force
 git add .
 git commit -m "Deploy Kapital PWA"
 git push origin gh-pages --force
 
-# 7. Volver a main
+# 8. Volver a main
 git checkout main
 
 Write-Host "==============================="
