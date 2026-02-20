@@ -34,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  "Kapital",
+                  "Kapital color",
                   style: TextStyle(
                     fontSize: 42,
                     fontWeight: FontWeight.bold,
