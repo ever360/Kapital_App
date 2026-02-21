@@ -33,6 +33,7 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Image.asset('assets/logoKapital.png', height: 100),
                 const Text(
                   "Kapital color",
                   style: TextStyle(
