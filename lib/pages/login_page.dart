@@ -5,14 +5,12 @@ class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
   void _signInWithGoogle(BuildContext context) {
-    // Aquí va tu lógica de login con Google
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(content: Text("Login con Google en construcción...")),
     );
   }
 
   void _signInWithApple(BuildContext context) {
-    // Aquí va tu lógica de login con Apple
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(content: Text("Login con Apple en construcción...")),
     );
@@ -21,7 +19,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.orange[100], // Fondo suave para contraste
+      backgroundColor: Colors.orange[50], // fondo suave Kapital
       body: Center(
         child: SingleChildScrollView(
           padding: const EdgeInsets.symmetric(horizontal: 24.0),
@@ -60,21 +58,26 @@ class LoginPage extends StatelessWidget {
 
               const SizedBox(height: 30),
 
-              // Botón ingresar
+              // Botón ingresar normal
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size(double.infinity, 50),
                   backgroundColor: Colors.black,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
+                    side: const BorderSide(color: Colors.amber, width: 2),
                   ),
+                  elevation: 4,
                 ),
                 onPressed: () {
                   // Lógica de login normal
                 },
                 child: const Text(
                   "Ingresar",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
 
@@ -87,10 +90,18 @@ class LoginPage extends StatelessWidget {
                   backgroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
+                    side: const BorderSide(color: Colors.amber, width: 2),
                   ),
+                  elevation: 4,
                 ),
                 icon: const FaIcon(FontAwesomeIcons.google, color: Colors.red),
-                label: const Text("Ingresar con Google"),
+                label: const Text(
+                  "Ingresar con Google",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 onPressed: () => _signInWithGoogle(context),
               ),
 
@@ -100,13 +111,21 @@ class LoginPage extends StatelessWidget {
               ElevatedButton.icon(
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size(double.infinity, 50),
-                  backgroundColor: Colors.white,
+                  backgroundColor: Colors.black,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
+                    side: const BorderSide(color: Colors.amber, width: 2),
+                  ),
+                  elevation: 4,
+                ),
+                icon: const FaIcon(FontAwesomeIcons.apple, color: Colors.white),
+                label: const Text(
+                  "Ingresar con Apple",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
-                icon: const FaIcon(FontAwesomeIcons.apple, color: Colors.black),
-                label: const Text("Ingresar con Apple"),
                 onPressed: () => _signInWithApple(context),
               ),
 
@@ -117,7 +136,13 @@ class LoginPage extends StatelessWidget {
                 onPressed: () {
                   // Navegar a pantalla de registro
                 },
-                child: const Text("¿No tienes cuenta? Regístrate"),
+                child: const Text(
+                  "¿No tienes cuenta? Regístrate",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
               ),
             ],
           ),
