@@ -15,12 +15,11 @@ class _LoginPageState extends State<LoginPage> {
   @override
   void initState() {
     super.initState();
-    // Cambiar color de la barra de notificaciones
+    // Barra transparente y íconos claros
     SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(
-        statusBarColor:
-            Colors.transparent, // transparente para que se vea el gradiente
-        statusBarIconBrightness: Brightness.light, // íconos claros
+        statusBarColor: Colors.transparent, // se ve el gradiente
+        statusBarIconBrightness: Brightness.light, // íconos blancos
       ),
     );
   }
@@ -50,6 +49,7 @@ class _LoginPageState extends State<LoginPage> {
     final screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
+      extendBodyBehindAppBar: true, // fondo detrás de la barra
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: double.infinity,
@@ -74,9 +74,12 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    // Logo Kapital
                     Image.asset('assets/logoKapital.png', height: 120),
+
                     const SizedBox(height: 40),
 
+                    // Campo correo
                     TextField(
                       decoration: InputDecoration(
                         labelText: "Correo electrónico",
@@ -89,6 +92,7 @@ class _LoginPageState extends State<LoginPage> {
 
                     const SizedBox(height: 20),
 
+                    // Campo contraseña con toggle
                     TextField(
                       obscureText: _obscurePassword,
                       decoration: InputDecoration(
@@ -114,16 +118,24 @@ class _LoginPageState extends State<LoginPage> {
 
                     const SizedBox(height: 10),
 
+                    // Olvidaste tu contraseña
                     Align(
                       alignment: Alignment.centerRight,
                       child: TextButton(
                         onPressed: () => _recoverPassword(context),
-                        child: const Text("¿Olvidaste tu contraseña?"),
+                        child: const Text(
+                          "¿Olvidaste tu contraseña?",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
                       ),
                     ),
 
                     const SizedBox(height: 20),
 
+                    // Botón ingresar normal
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         minimumSize: const Size(double.infinity, 50),
@@ -132,16 +144,21 @@ class _LoginPageState extends State<LoginPage> {
                           borderRadius: BorderRadius.circular(12),
                           side: const BorderSide(color: Colors.amber, width: 2),
                         ),
+                        elevation: 4,
                       ),
                       onPressed: () {},
                       child: const Text(
                         "Ingresar",
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
 
                     const SizedBox(height: 30),
 
+                    // Divisor con "o"
                     Row(
                       children: const [
                         Expanded(child: Divider(thickness: 1)),
@@ -155,6 +172,7 @@ class _LoginPageState extends State<LoginPage> {
 
                     const SizedBox(height: 20),
 
+                    // Fila de íconos sociales
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -180,6 +198,7 @@ class _LoginPageState extends State<LoginPage> {
 
                     const SizedBox(height: 30),
 
+                    // Registro con RichText
                     TextButton(
                       onPressed: () {},
                       child: RichText(
@@ -190,7 +209,7 @@ class _LoginPageState extends State<LoginPage> {
                             TextSpan(
                               text: "Regístrate",
                               style: TextStyle(
-                                color: Colors.amber,
+                                color: Colors.amber, // dorado Kapital
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
