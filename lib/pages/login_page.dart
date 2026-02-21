@@ -26,7 +26,7 @@ class _LoginPageState extends State<LoginPage> {
 
   void _signInWithGoogle(BuildContext context) {
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text("Login con Google en construcción...")),
+      const SnackBar(content: Text("Login con Google en desarrollo...")),
     );
   }
 
