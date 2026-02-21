@@ -81517,11 +81517,11 @@ A.ak9.prototype={
 $0(){},
 $S:0}
 A.aka.prototype={
-$0(){this.b.an(t.Pu).f.Bu(B.OO)
+$0(){this.b.an(t.Pu).f.Bu(B.ON)
 return null},
 $S:0}
 A.akb.prototype={
-$0(){this.b.an(t.Pu).f.Bu(B.ON)
+$0(){this.b.an(t.Pu).f.Bu(B.OO)
 return null},
 $S:0}
 A.akc.prototype={
@@ -81537,7 +81537,7 @@ r=this.d
 q=A.rf(p,p,A.a3t(r?B.ng:B.nf,B.G,p),p,p,new A.alj(this),p,p,p)
 r=A.aeq(A.Js(p,new A.eR(4,A.hO(16),B.q),p,p,p,p,p,p,!0,p,p,p,p,p,p,B.k,!0,p,p,p,p,p,p,p,p,p,p,p,p,p,p,"Contrase\xf1a",p,p,p,p,p,p,p,p,p,!0,!0,!1,p,B.EY,p,p,p,p,p,p,q,p,p,p,p,p),r)
 q=A.avB(p,p,B.k,p,p,p,p,p,p,p,p,p,B.E5,p,new A.cJ(A.hO(16),B.q),p,p,p,p,p)
-return A.as4(p,B.hh,new A.fN(1/0,1/0,A.iR(A.axG(A.Zi(A.d([B.U6,B.OA,s,B.eW,r,B.kO,A.fO(A.avA(A.kO("Registrarse",p,p,p,A.fS(p,p,B.hh,p,p,p,p,p,p,p,p,18,p,p,B.jL,p,p,!0,p,p,p,p,p,p,p,p),p,p),new A.alk(a),q),p,1/0),B.eW,A.N7(B.U9,new A.all(a),p)],t.E),B.aZ,B.he,B.cM),B.Ee),p,p),p),!1)}}
+return A.as4(p,B.hh,new A.fN(1/0,1/0,A.iR(A.axG(A.Zi(A.d([B.U7,B.OA,s,B.eW,r,B.kO,A.fO(A.avA(A.kO("Registrarse",p,p,p,A.fS(p,p,B.hh,p,p,p,p,p,p,p,p,18,p,p,B.jL,p,p,!0,p,p,p,p,p,p,p,p),p,p),new A.alk(a),q),p,1/0),B.eW,A.N7(B.U9,new A.all(a),p)],t.E),B.aZ,B.he,B.cM),B.Ee),p,p),p),!1)}}
 A.alj.prototype={
 $0(){var s=this.a
 s.ak(new A.ali(s))},
@@ -87238,8 +87238,8 @@ B.Bi=new A.we(null,null,null,null,null,null,null)
 B.Bj=new A.wf(null,null,null,null,null,null)
 B.bP=new A.fe(700)
 B.S2=new A.k(!0,null,null,null,null,null,24,B.bP,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.U7=new A.eU("Bienvenido a tu panel de Kapital \ud83d\ude80",null,B.S2,null,null,null,null,null,null)
-B.Bk=new A.lp(B.a4,null,null,B.U7,null)
+B.U8=new A.eU("Bienvenido a tu panel de Kapital \ud83d\ude80",null,B.S2,null,null,null,null,null,null)
+B.Bk=new A.lp(B.a4,null,null,B.U8,null)
 B.Bl=new A.lq(1,"error")
 B.m6=new A.lq(5,"heartbeat")
 B.m7=new A.lq(6,"accessToken")
@@ -89248,11 +89248,11 @@ B.OK=new A.jq(3,"hide")
 B.Xw=new A.jq(4,"remove")
 B.OL=new A.jq(5,"timeout")
 B.OM=new A.tq(null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.U5=new A.eU("Login con Apple en construcci\xf3n...",null,null,null,null,null,null,null,null)
+B.U5=new A.eU("Login con Google en desarrollo...",null,null,null,null,null,null,null,null)
 B.j3=new A.aK(4e6)
 B.ON=new A.kL(B.U5,null,null,null,null,null,null,null,null,null,null,null,null,B.j3,!1,null,null,null,B.a0,null)
-B.U8=new A.eU("Login con Google en construcci\xf3n...",null,null,null,null,null,null,null,null)
-B.OO=new A.kL(B.U8,null,null,null,null,null,null,null,null,null,null,null,null,B.j3,!1,null,null,null,B.a0,null)
+B.U6=new A.eU("Login con Apple en construcci\xf3n...",null,null,null,null,null,null,null,null)
+B.OO=new A.kL(B.U6,null,null,null,null,null,null,null,null,null,null,null,null,B.j3,!1,null,null,null,B.a0,null)
 B.Ua=new A.eU("Recuperaci\xf3n de contrase\xf1a en construcci\xf3n...",null,null,null,null,null,null,null,null)
 B.OP=new A.kL(B.Ua,null,null,null,null,null,null,null,null,null,null,null,null,B.j3,!1,null,null,null,B.a0,null)
 B.yp=new A.Ax(0,"permissive")
@@ -89631,7 +89631,7 @@ B.U3=new A.eU("Kapital",null,null,null,null,null,null,null,null)
 B.RF=new A.k(!0,B.l,null,null,null,null,null,B.jL,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.U4=new A.eU("\xbfOlvidaste tu contrase\xf1a?",null,B.RF,null,null,null,null,null,null)
 B.QA=new A.k(!0,B.k,null,null,null,null,42,B.bP,null,2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.U6=new A.eU("Registro - Kapital",null,B.QA,null,null,null,null,null,null)
+B.U7=new A.eU("Registro - Kapital",null,B.QA,null,null,null,null,null,null)
 B.RO=new A.k(!0,B.k,null,null,null,null,null,B.V,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.U9=new A.eU("\xbfYa tienes cuenta? Inicia sesi\xf3n",null,B.RO,null,null,null,null,null,null)
 B.RS=new A.k(!0,B.k,null,null,null,null,null,B.bP,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
