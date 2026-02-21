@@ -1,137 +1,125 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class LoginPage extends StatefulWidget {
+class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
-  @override
-  State<LoginPage> createState() => _LoginPageState();
-}
+  void _signInWithGoogle(BuildContext context) {
+    // Aquí va tu lógica de login con Google
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text("Login con Google en construcción...")),
+    );
+  }
 
-class _LoginPageState extends State<LoginPage> {
-  bool _obscurePassword = true;
+  void _signInWithApple(BuildContext context) {
+    // Aquí va tu lógica de login con Apple
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text("Login con Apple en construcción...")),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
-    // Aquí defines el color de fondo que quieras
-    const Color fondo = Colors.orange; // cambia a azul, verde, etc.
-
-    // Barra de estado dinámica: toma el mismo color que el fondo
-    SystemChrome.setSystemUIOverlayStyle(
-      SystemUiOverlayStyle(
-        statusBarColor: fondo,
-        statusBarIconBrightness: Brightness.light,
-      ),
-    );
-
     return Scaffold(
-      backgroundColor: fondo,
-      body: SizedBox.expand(
-        child: Center(
-          child: SingleChildScrollView(
-            padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 60),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset('assets/logoKapital.png', height: 100),
-                const Text(
-                  "Kapital color",
-                  style: TextStyle(
-                    fontSize: 42,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                    letterSpacing: 2,
-                  ),
-                ),
-                const SizedBox(height: 50),
+      backgroundColor: Colors.orange[100], // Fondo suave para contraste
+      body: Center(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.symmetric(horizontal: 24.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // Logo Kapital
+              Image.asset('assets/logoKapital.png', height: 120),
 
-                TextField(
-                  decoration: InputDecoration(
-                    hintText: "Correo electrónico",
-                    prefixIcon: const Icon(
-                      Icons.email_outlined,
-                      color: Colors.black54,
-                    ),
-                    filled: true,
-                    fillColor: Colors.white,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(16),
-                      borderSide: BorderSide.none,
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 20),
+              const SizedBox(height: 40),
 
-                TextField(
-                  obscureText: _obscurePassword,
-                  decoration: InputDecoration(
-                    hintText: "Contraseña",
-                    prefixIcon: const Icon(
-                      Icons.lock_outline,
-                      color: Colors.black54,
-                    ),
-                    suffixIcon: IconButton(
-                      icon: Icon(
-                        _obscurePassword
-                            ? Icons.visibility_off
-                            : Icons.visibility,
-                        color: Colors.black54,
-                      ),
-                      onPressed: () {
-                        setState(() {
-                          _obscurePassword = !_obscurePassword;
-                        });
-                      },
-                    ),
-                    filled: true,
-                    fillColor: Colors.white,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(16),
-                      borderSide: BorderSide.none,
-                    ),
+              // Campo correo
+              TextField(
+                decoration: InputDecoration(
+                  labelText: "Correo electrónico",
+                  prefixIcon: const Icon(Icons.email),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
                   ),
                 ),
-                const SizedBox(height: 30),
+              ),
 
-                SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(vertical: 18),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                    ),
-                    onPressed: () {
-                      Navigator.pushReplacementNamed(context, '/home');
-                    },
-                    child: Text(
-                      "Ingresar",
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                        color: fondo, // texto con el mismo color que el fondo
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 20),
+              const SizedBox(height: 20),
 
-                TextButton(
-                  onPressed: () {
-                    Navigator.pushReplacementNamed(context, '/register');
-                  },
-                  child: const Text(
-                    "¿No tienes cuenta? Regístrate",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w500,
-                    ),
+              // Campo contraseña
+              TextField(
+                obscureText: true,
+                decoration: InputDecoration(
+                  labelText: "Contraseña",
+                  prefixIcon: const Icon(Icons.lock),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
                   ),
                 ),
-              ],
-            ),
+              ),
+
+              const SizedBox(height: 30),
+
+              // Botón ingresar
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  minimumSize: const Size(double.infinity, 50),
+                  backgroundColor: Colors.black,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+                onPressed: () {
+                  // Lógica de login normal
+                },
+                child: const Text(
+                  "Ingresar",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+
+              const SizedBox(height: 20),
+
+              // Botón Google
+              ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(
+                  minimumSize: const Size(double.infinity, 50),
+                  backgroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+                icon: const FaIcon(FontAwesomeIcons.google, color: Colors.red),
+                label: const Text("Ingresar con Google"),
+                onPressed: () => _signInWithGoogle(context),
+              ),
+
+              const SizedBox(height: 15),
+
+              // Botón Apple
+              ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(
+                  minimumSize: const Size(double.infinity, 50),
+                  backgroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+                icon: const FaIcon(FontAwesomeIcons.apple, color: Colors.black),
+                label: const Text("Ingresar con Apple"),
+                onPressed: () => _signInWithApple(context),
+              ),
+
+              const SizedBox(height: 30),
+
+              // Registro
+              TextButton(
+                onPressed: () {
+                  // Navegar a pantalla de registro
+                },
+                child: const Text("¿No tienes cuenta? Regístrate"),
+              ),
+            ],
           ),
         ),
       ),
