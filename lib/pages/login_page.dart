@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LoginPage extends StatefulWidget {
@@ -10,6 +11,19 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   bool _obscurePassword = true;
+
+  @override
+  void initState() {
+    super.initState();
+    // Cambiar color de la barra de notificaciones
+    SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(
+        statusBarColor:
+            Colors.transparent, // transparente para que se vea el gradiente
+        statusBarIconBrightness: Brightness.light, // íconos claros
+      ),
+    );
+  }
 
   void _signInWithGoogle(BuildContext context) {
     ScaffoldMessenger.of(context).showSnackBar(
@@ -41,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
         width: double.infinity,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.green, Colors.orange], // ejemplo Kapital
+            colors: [Colors.green, Colors.orange], // gradiente Kapital
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),
@@ -60,12 +74,9 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    // Logo Kapital
                     Image.asset('assets/logoKapital.png', height: 120),
-
                     const SizedBox(height: 40),
 
-                    // Campo correo
                     TextField(
                       decoration: InputDecoration(
                         labelText: "Correo electrónico",
@@ -78,7 +89,6 @@ class _LoginPageState extends State<LoginPage> {
 
                     const SizedBox(height: 20),
 
-                    // Campo contraseña con toggle de visibilidad
                     TextField(
                       obscureText: _obscurePassword,
                       decoration: InputDecoration(
@@ -104,24 +114,16 @@ class _LoginPageState extends State<LoginPage> {
 
                     const SizedBox(height: 10),
 
-                    // Olvidaste tu contraseña
                     Align(
                       alignment: Alignment.centerRight,
                       child: TextButton(
                         onPressed: () => _recoverPassword(context),
-                        child: const Text(
-                          "¿Olvidaste tu contraseña?",
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
+                        child: const Text("¿Olvidaste tu contraseña?"),
                       ),
                     ),
 
                     const SizedBox(height: 20),
 
-                    // Botón ingresar normal
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         minimumSize: const Size(double.infinity, 50),
@@ -130,23 +132,16 @@ class _LoginPageState extends State<LoginPage> {
                           borderRadius: BorderRadius.circular(12),
                           side: const BorderSide(color: Colors.amber, width: 2),
                         ),
-                        elevation: 4,
                       ),
-                      onPressed: () {
-                        // Lógica de login normal
-                      },
+                      onPressed: () {},
                       child: const Text(
                         "Ingresar",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                        ),
+                        style: TextStyle(color: Colors.white),
                       ),
                     ),
 
                     const SizedBox(height: 30),
 
-                    // Divisor con "o"
                     Row(
                       children: const [
                         Expanded(child: Divider(thickness: 1)),
@@ -160,7 +155,6 @@ class _LoginPageState extends State<LoginPage> {
 
                     const SizedBox(height: 20),
 
-                    // Fila de íconos sociales
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -186,25 +180,18 @@ class _LoginPageState extends State<LoginPage> {
 
                     const SizedBox(height: 30),
 
-                    // Registro
                     TextButton(
-                      onPressed: () {
-                        // Navegar a pantalla de registro
-                      },
+                      onPressed: () {},
                       child: RichText(
                         text: const TextSpan(
-                          style: TextStyle(
-                            color: Colors.black54,
-                            fontWeight: FontWeight.w600,
-                          ),
+                          style: TextStyle(color: Colors.black),
                           children: [
                             TextSpan(text: "¿No tienes cuenta? "),
                             TextSpan(
                               text: "Regístrate",
                               style: TextStyle(
-                                color: Colors.amber, //color dorado kapital
-                                fontWeight: FontWeight.w600,
-                                decoration: TextDecoration.underline,
+                                color: Colors.amber,
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
                           ],
