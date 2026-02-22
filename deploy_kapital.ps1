@@ -35,6 +35,10 @@ git push origin gh-pages --force
 # 8. Volver a main
 git checkout main
 
+# 9. forzar actualizado
+git add .
+git commit -m "Descripción de los cambios realizados"
+
 Write-Host "==============================="
 Write-Host "Deploy Kapital PWA completado 🚀"
 Write-Host "==============================="
