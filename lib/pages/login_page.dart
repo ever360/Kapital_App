@@ -126,7 +126,7 @@ class _LoginPageState extends State<LoginPage> {
                       child: TextButton(
                         onPressed: () => _recoverPassword(context),
                         child: const Text(
-                          "¿Olvidaste tu contraseña V1?",
+                          "¿Olvidaste tu contraseña V2?",
                           style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.w600,
