@@ -27,14 +27,14 @@ class _LoginPageState extends State<LoginPage> {
   void _signInWithGoogle(BuildContext context) {
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
-        content: Text(" Google inisio esat en estado de  desarrollo..."),
+        content: Text(" Google inisio esta en estado de  desarrollo..."),
       ),
     );
   }
 
   void _signInWithApple(BuildContext context) {
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text("Login con Apple en construcción...")),
+      const SnackBar(content: Text("Login con Apple modo desarrollo...")),
     );
   }
 
@@ -57,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
         width: double.infinity,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.green, Colors.orange], // gradiente Kapital
+            colors: [Colors.green], // gradiente Kapital
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),
@@ -126,7 +126,7 @@ class _LoginPageState extends State<LoginPage> {
                       child: TextButton(
                         onPressed: () => _recoverPassword(context),
                         child: const Text(
-                          "¿Olvidaste tu contraseña?",
+                          "¿Olvidaste tu contraseña V1?",
                           style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.w600,
