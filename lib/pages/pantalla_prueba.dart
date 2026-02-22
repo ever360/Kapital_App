@@ -14,7 +14,7 @@ class _PantallaPruebaState extends State<PantallaPrueba> {
   @override
   Widget build(BuildContext context) {
     // Color dinámico de fondo
-    const Color fondo = Colors.green; // cámbialo a orange, red, etc.
+    const Color fondo = Colors.redAccent; // cámbialo a orange, red, etc.
 
     // Barra de estado toma el mismo color
     SystemChrome.setSystemUIOverlayStyle(
