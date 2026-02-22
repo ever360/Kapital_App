@@ -6,10 +6,31 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="theme-color" content="#FFA500" id="theme-color-meta">
+  <head>
   <!-- Descripción y SEO -->
-  <meta name="description" content="Tu futuro financiero empieza aquí">
-  <meta name="theme-color" content="transparent"> 
+  <meta name="theme-color" content="#008000" id="theme-color-meta">
+
+  <script>
+    // Detectar modo oscuro/claro
+    function updateThemeColor() {
+      const metaThemeColor = document.querySelector("#theme-color-meta");
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        metaThemeColor.setAttribute("content", "#000000"); // negro en modo oscuro
+      } else {
+        metaThemeColor.setAttribute("content", "#008000"); // verde en modo claro
+      }
+    }
+
+    // Ejecutar al cargar
+    updateThemeColor();
+
+    // Escuchar cambios de modo
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", updateThemeColor);
+  </script>
+</head>
+
+
 
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
