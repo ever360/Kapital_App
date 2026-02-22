@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class RegisterPage extends StatefulWidget {
-  const RegisterPage({super.key});
+class PantallaPrueba extends StatefulWidget {
+  const PantallaPrueba({super.key});
 
   @override
-  State<RegisterPage> createState() => _RegisterPageState();
+  State<PantallaPrueba> createState() => _PantallaPruebaState();
 }
 
-class _RegisterPageState extends State<RegisterPage> {
+class _PantallaPruebaState extends State<PantallaPrueba> {
   bool _obscurePassword = true;
 
   @override

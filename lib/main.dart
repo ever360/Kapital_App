@@ -1,9 +1,10 @@
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:kapital_app/pages/register_page.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'pages/login_page.dart';
-import 'pages/register_page1.dart';
+import 'pages/pantalla_prueba.dart';
 import 'pages/home_page.dart';
 
 void main() async {
@@ -92,6 +93,7 @@ class KapitalApp extends StatelessWidget {
       routes: {
         '/login': (context) => const LoginPage(),
         '/register': (context) => const RegisterPage(),
+        '/registroPagina': (context) => const PantallaPrueba(),
         '/home': (context) => HomePage(),
       },
     );

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'register_page.dart'; // Importamos la pantalla de registro
+import 'pantalla_prueba.dart'; // Importamos la pantalla de registro1
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -79,7 +80,7 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     // Linea de Actualizacion
                     const Text(
-                      "Actualización v1.0",
+                      "Actualización v1.1",
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -212,6 +213,33 @@ class _LoginPageState extends State<LoginPage> {
                               text: "Regístrate",
                               style: TextStyle(
                                 color: Colors.amber,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+
+                    // Registro con navegación1
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const PantallaPrueba(),
+                          ),
+                        );
+                      },
+                      child: RichText(
+                        text: const TextSpan(
+                          style: TextStyle(color: Colors.black),
+                          children: [
+                            TextSpan(text: "¿No tienes cuentav? "),
+                            TextSpan(
+                              text: "Regístrate ya",
+                              style: TextStyle(
+                                color: Color.fromARGB(255, 255, 7, 94),
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
