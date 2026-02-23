@@ -1,0 +1,9 @@
+import 'dart:html' as html;
+import 'package:flutter/foundation.dart';
+
+void setThemeColor(String colorHex) {
+  if (kIsWeb) {
+    final meta = html.document.head!.querySelector('#theme-color-meta') as html.MetaElement?;
+    meta?.content = colorHex;
+  }
+}

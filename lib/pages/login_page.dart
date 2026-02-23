@@ -80,7 +80,7 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     // Linea de Actualizacion
                     const Text(
-                      "Actualización v1.2",
+                      "Actualización v1.3",
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
