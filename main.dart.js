@@ -81515,7 +81515,7 @@ A.R9.prototype={
 az(){this.aU()
 A.AT(B.yU)},
 O(a){var s=this,r=null,q=A.bA(a,r,t.w).w.a.a>600?400:1/0,p=A.awa("assets/logoKapital.png",120),o=A.tP(A.o3(r,new A.e1(4,A.eK(12),B.d2),r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,"Correo electr\xf3nico",!0,!0,!1,r,B.nv,r,r,r,r,r,r,r,r,r,r,r,r),!1),n=s.d,m=A.rl(r,r,A.a3B(n?B.nt:B.ns,r,r),r,r,new A.akf(s),r,r,r),l=t.E
-return A.ab4(r,r,A.HP(A.LP(!0,A.hS(new A.eP(new A.ae(0,q,0,1/0),A.asm(A.HI(A.d([B.V4,p,B.yH,o,B.ci,A.tP(A.o3(r,new A.e1(4,A.eK(12),B.d2),r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,"Contrase\xf1a",!0,!0,!1,r,B.nw,r,r,r,r,r,r,m,r,r,r,r,r),n),B.Po,new A.f5(B.lB,r,r,A.B4(B.UY,new A.akg(s,a),r),r),B.ci,A.arq(B.UV,new A.akh(),A.arr(r,r,B.l,r,r,r,4,r,r,r,r,B.yE,r,r,new A.cA(A.eK(12),B.lL),r,r,r,r,r)),B.kS,A.LM(B.HW,B.aU,B.bR,B.cf),B.ci,A.LM(A.d([A.rl(r,r,B.F9,r,r,new A.aki(s,a),r,r,r),B.Pn,A.rl(r,r,B.Fa,r,r,new A.akj(s,a),r,r,r)],l),B.aU,B.eI,B.cf),B.kS,A.B4(A.zU(r,r,r,B.bX,r,r,!0,r,B.QB,B.ar,r,r,B.aA,B.as),new A.akk(a),r),A.B4(A.zU(r,r,r,B.bX,r,r,!0,r,B.QD,B.ar,r,r,B.aA,B.as),new A.akl(a),r)],l),B.aU,B.eI,B.cf),B.mX),r),r,r),!0),B.M,B.Am,1/0,r,r,1/0),!0)}}
+return A.ab4(r,r,A.HP(A.LP(!0,A.hS(new A.eP(new A.ae(0,q,0,1/0),A.asm(A.HI(A.d([B.V3,p,B.yH,o,B.ci,A.tP(A.o3(r,new A.e1(4,A.eK(12),B.d2),r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,"Contrase\xf1a",!0,!0,!1,r,B.nw,r,r,r,r,r,r,m,r,r,r,r,r),n),B.Po,new A.f5(B.lB,r,r,A.B4(B.UY,new A.akg(s,a),r),r),B.ci,A.arq(B.UV,new A.akh(),A.arr(r,r,B.l,r,r,r,4,r,r,r,r,B.yE,r,r,new A.cA(A.eK(12),B.lL),r,r,r,r,r)),B.kS,A.LM(B.HW,B.aU,B.bR,B.cf),B.ci,A.LM(A.d([A.rl(r,r,B.F9,r,r,new A.aki(s,a),r,r,r),B.Pn,A.rl(r,r,B.Fa,r,r,new A.akj(s,a),r,r,r)],l),B.aU,B.eI,B.cf),B.kS,A.B4(A.zU(r,r,r,B.bX,r,r,!0,r,B.QB,B.ar,r,r,B.aA,B.as),new A.akk(a),r),A.B4(A.zU(r,r,r,B.bX,r,r,!0,r,B.QD,B.ar,r,r,B.aA,B.as),new A.akl(a),r)],l),B.aU,B.eI,B.cf),B.mX),r),r,r),!0),B.M,B.Am,1/0,r,r,1/0),!0)}}
 A.akf.prototype={
 $0(){var s=this.a
 s.ak(new A.ake(s))},
@@ -89337,8 +89337,8 @@ B.j6=new A.aK(4e6)
 B.PC=new A.kN(B.UU,null,null,null,null,null,null,null,null,null,null,null,null,B.j6,!1,null,null,null,B.a0,null)
 B.V1=new A.ep("Login con Apple modo desarrollo...",null,null,null,null,null,null,null,null)
 B.PD=new A.kN(B.V1,null,null,null,null,null,null,null,null,null,null,null,null,B.j6,!1,null,null,null,B.a0,null)
-B.V3=new A.ep("Recuperaci\xf3n de contrase\xf1a en construcci\xf3n...",null,null,null,null,null,null,null,null)
-B.PE=new A.kN(B.V3,null,null,null,null,null,null,null,null,null,null,null,null,B.j6,!1,null,null,null,B.a0,null)
+B.V4=new A.ep("Recuperaci\xf3n de contrase\xf1a en construcci\xf3n...",null,null,null,null,null,null,null,null)
+B.PE=new A.kN(B.V4,null,null,null,null,null,null,null,null,null,null,null,null,B.j6,!1,null,null,null,B.a0,null)
 B.yJ=new A.AE(0,"permissive")
 B.PF=new A.AE(1,"normal")
 B.PG=new A.AE(2,"forced")
@@ -89728,7 +89728,7 @@ B.V_=new A.ep("Registrarse",null,B.za,null,null,null,null,null,null)
 B.SH=new A.k(!0,B.k,null,null,null,null,null,B.W,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.V2=new A.ep("\xbfYa tienes cuenta? Inicia sesi\xf3n",null,B.SH,null,null,null,null,null,null)
 B.RB=new A.k(!0,B.k,null,null,null,null,16,B.bw,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.V4=new A.ep("Actualizaci\xf3n v1.3",null,B.RB,null,null,null,null,null,null)
+B.V3=new A.ep("Actualizaci\xf3n V1.4",null,B.RB,null,null,null,null,null,null)
 B.zd=new A.Ns(0,"system")
 B.V5=new A.Ns(2,"dark")
 B.LD=new A.h(0.056,0.024)
