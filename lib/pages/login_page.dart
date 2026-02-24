@@ -81,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     // Linea de Actualizacion
                     const Text(
-                      "Actualización V1.5 - ¡Ahora con login funcional!",
+                      "Actualización V1.6- ¡Ahora con login funcional!",
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
