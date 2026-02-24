@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'register_page.dart'; // Importamos la pantalla de registro
-import 'pantalla_prueba.dart'; // Importamos la pantalla de registro1
+import 'pantalla_prueba.dart'; // Importamos la pantalla de registro1 pantallaNumero2
+import 'prueba_login.dart'; // Importamos la pantalla  pantallaNumero2
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -80,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     // Linea de Actualizacion
                     const Text(
-                      "Actualización V1.4",
+                      "Actualización V1.5 - ¡Ahora con login funcional!",
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -240,6 +241,33 @@ class _LoginPageState extends State<LoginPage> {
                               text: "Regístrate ya",
                               style: TextStyle(
                                 color: Color.fromARGB(255, 255, 7, 94),
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+
+                    // Registro con navegación a ántalla de prueba 2
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const PruebaLogin(),
+                          ),
+                        );
+                      },
+                      child: RichText(
+                        text: const TextSpan(
+                          style: TextStyle(color: Colors.black),
+                          children: [
+                            TextSpan(text: "¿No tienes cuentav? "),
+                            TextSpan(
+                              text: "Regístrate ya",
+                              style: TextStyle(
+                                color: Color.fromARGB(255, 69, 7, 255),
                                 fontWeight: FontWeight.bold,
                               ),
                             ),

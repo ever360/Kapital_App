@@ -6,6 +6,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'pages/login_page.dart';
 import 'pages/pantalla_prueba.dart';
 import 'pages/home_page.dart';
+import 'pages/prueba_login.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -94,6 +95,7 @@ class KapitalApp extends StatelessWidget {
         '/login': (context) => const LoginPage(),
         '/register': (context) => const RegisterPage(),
         '/registroPagina': (context) => const PantallaPrueba(),
+        '/PruebaLogin': (context) => const PruebaLogin(),
         '/home': (context) => HomePage(),
       },
     );
